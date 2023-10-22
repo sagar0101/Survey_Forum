@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    background-color: rgb(177, 226, 246);
+
+}
+
+#wrapper {
+    width: 400px;
+    height: 550px;
+    box-shadow: 0 0 10px black;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: antiquewhite;
+}
+
+
+.container {
+    width: 400px;
+    height: 530px;
+    border-radius: 10px;
+
+
+}
+
+.form-input {
+    margin: 20px;
+    width: 90%;
+    border-radius: 7px;
+    height: 25px;
+    cursor: pointer;
+
+}
+
+.form-label {
+    margin: 10px;
+    color: rgb(160, 94, 19);
+    font-weight: 900;
+
+}
+
+.form-button {
+    margin-left: 150px;
+    background-color: none;
+    font-size: 15px;
+    box-shadow: 0px 0px 7px black;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    color: rgb(6, 5, 5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    width: 110px;
+    height: 30px;
+
+
+}
+
+.form-button::before {
+    content: "";
+    background-color: rgb(125, 90, 141);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.67s;
+    z-index: -1;
+}
+
+.form-button:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* Media query for screens between 992px and 1199px */
+@media screen and (max-width: 1199px) {
+    #wrapper {
+        width: 80%;
+        height: auto;
+    }
+
+    .form-input {
+        width: 100%;
+    }
+
+    .form-button {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Media query for screens between 768px and 991px */
+@media screen and (max-width: 991px) {
+    #wrapper {
+        width: 90%;
+        height: auto;
+    }
+
+    .form-input {
+        width: 90%;
+    }
+
+    .form-button {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 767px) {
+    #wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-input {
+        width: 80%;
+    }
+
+    .form-button {
+        margin-left: 0;
+        width: 100%;
+    }
+}
